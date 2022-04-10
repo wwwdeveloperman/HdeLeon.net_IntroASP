@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, 
+    visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+    @{ } es para C# lineas.
+    Hola desde Index.
+
+    Controlador Brand-Controller.
+*@
+
+@{
+}
+
+
+
+@model List<Brand>
+
+<h1>Marcas</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach ( var brand in Model )
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>brand.Name)</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
