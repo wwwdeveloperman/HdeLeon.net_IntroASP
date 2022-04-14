@@ -1,12 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
 }
+
+@*
+  @model relaciona la actual vista con un modelo en el cual estan las validaciones.
+
+*@
 
 @model List<Beer>
 
 <h1>Cervezas</h1>
+
+<p> 
+    <a asp-action="Create" >Crear Cerveza. </a>      @* <---    Opcion Crear    *@
+</p>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -24,7 +32,7 @@
                     @Html.DisplayFor( m => beer.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor( m=>beer.Brand.Name)
+                    @Html.DisplayFor( m => beer.Brand.Name)
                 </td>
             </tr>
         }
